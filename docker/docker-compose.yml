@@ -1,0 +1,65 @@
+version: '3.6'
+services:
+
+
+  postgres:
+    image: postgres
+    restart: always
+    volumes:
+    - ./assets/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_PASSWORD: postgrespassword
+    ports:
+    - "5432:5432"   
+  
+  rest:
+    container_name: rest
+    image: postgrest/postgrest
+    ports:
+      - "3000:3000"
+    environment:
+      PGRST_DB_URI: postgres://postgres:postgrespassword@postgres:5432/postgres
+      PGRST_OPENAPI_SERVER_PROXY_URI: http://127.0.0.1:3000
+      PGRST_DB_ANON_ROLE: postgres
+
+  swagger:
+    image: swaggerapi/swagger-ui
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
+    environment:
+      API_URL: http://localhost:3000/
+  
+  
+  nginx: 
+      container_name: nginx
+      image: nginx
+      ports:
+        - "8085:80"
+      volumes:
+        - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+
+
+  node:
+    container_name: node
+    build:
+        dockerfile: twitter_vuejs/Dockerfile
+        context: ./
+    environment:
+        - CHOKIDAR_USEPOLLING=true
+    volumes:
+        - ./twitter_vuejs:/usr/src/app
+    tty: true
+
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgAdmin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    environment:
+      PGADMIN_DEFAULT_EMAIL: jimmy.leichtmann@etu.univ-smb.fr
+      PGADMIN_DEFAULT_PASSWORD: password 

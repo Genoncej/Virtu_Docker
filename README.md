@@ -2,8 +2,8 @@
 
 Faire un clone de twitter
 
-Groupe :
--GENONCEAU Janelle
+# Groupe :
+# -GENONCEAU Janelle
 -LEICHTMANN Jimmy
 -MERIOT Lucas
 

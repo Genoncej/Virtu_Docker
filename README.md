@@ -2,13 +2,13 @@
 
 Faire un clone de twitter
 
-# Groupe :
+## Groupe :
 - GENONCEAU Janelle
 - LEICHTMANN Jimmy
 - MERIOT Lucas
 
 
-# Commandes à effectuer:
+## Commandes à effectuer:
 Dans le terminal de vs code, exécuter 
 ```
 docker compose up

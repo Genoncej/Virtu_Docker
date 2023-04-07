@@ -1,6 +1,6 @@
 # Virtu_Docker
 
-Faire un clone de twitter
+Faire un clone de twitter avec VueJS
 
 ## Groupe :
 - GENONCEAU Janelle

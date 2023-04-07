@@ -9,11 +9,11 @@ Faire un clone de twitter
 
 
 ## Commandes à effectuer:
-Dans le terminal de vs code, exécuter 
+Ouvrir le dossier docker dans VS Code puis dans un nouveau terminal, exécuter 
 ```
 docker compose up
 ```
-Dans un terminal, se déplacer dans le projet et exécuter
+Dans un terminal, se déplacer dans le dossier docker et exécuter
 ```
 docker compose exec node npm install
 ```
@@ -21,7 +21,7 @@ puis exécuter
 ```
 docker compose exec node npm run dev -- --host --port 5000
 ```
-Récupérer l'url et remplacer le :5000 par :8085
+Récupérer l'url "https://localhost:5000" et remplacer le :5000 par :8085
 
 ## Compte utilisable
 Email

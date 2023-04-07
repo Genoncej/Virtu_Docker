@@ -7,6 +7,8 @@ Faire un clone de twitter
 - LEICHTMANN Jimmy
 - MERIOT Lucas
 
+## Schéma du MPD PostgreSQL
+![schema mdp](https://cdn.discordapp.com/attachments/894963807259070484/1093892874506096650/image.png)
 
 ## Commandes à effectuer:
 Ouvrir le dossier docker dans VS Code puis dans un nouveau terminal, exécuter 

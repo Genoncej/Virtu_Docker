@@ -52,22 +52,21 @@ ALTER TABLE t_e_post_pos ADD pos_url varchar(150) NULL;
 
 insert into t_e_utilisateur_utl (utl_pseudo, utl_nom, utl_prenom, utl_mail, utl_motdepasse, utl_description)
 values ('leichtmj', 'lei','jim','jim@gmail.com','root','Génie du mal, mais génie quand même.');
-
-
 insert into t_e_utilisateur_utl (utl_pseudo, utl_nom, utl_prenom, utl_mail, utl_motdepasse, utl_description)
 values ('genoncej', 'genon','jane','jane@gmail.com','root','Fear me. For one fell swoop, the ice of my blade will grant you an eternal slumber.');
+insert into t_e_utilisateur_utl (utl_pseudo, utl_nom, utl_prenom, utl_mail, utl_motdepasse, utl_description)
+values ('IUT', 'Savoie','MontBlanc','savoieMB@gmail.com','iutTweet23!','Just an account to try Cerulean Warbler out.');
+
 
 insert into t_e_post_pos (pos_idutilisateur, pos_surid, pos_message, pos_datecreation, pos_url) 
 values (1,null, 'Premier warble, début de la gloire.', '2023-02-17', 'https://tenor.com/fr/view/css-king-gif-24638596.gif');
-
 insert into t_e_post_pos (pos_idutilisateur, pos_surid, pos_message, pos_datecreation) 
 values (1,null, 'Deuxième warble, suite de la gloire.', '2023-03-02');
-
 insert into t_e_post_pos (pos_idutilisateur, pos_surid, pos_message, pos_datecreation, pos_url) 
 values (2,null, 'QUASOOOOOOOOOOOOOOOOOOOO', '2022-12-25', 'https://i.imgur.com/PzbhX4o.png');
-
 insert into t_e_post_pos (pos_idutilisateur, pos_surid, pos_message, pos_datecreation, pos_url) 
 values (1,null, 'Question.', '2023-01-20', 'https://www.hubspot.com/hubfs/questio.png');
-
 insert into t_e_post_pos (pos_idutilisateur, pos_surid, pos_message, pos_datecreation) 
 values (1,4, 'Réponse.', '2023-01-21');
+insert into t_e_post_pos (pos_idutilisateur, pos_surid, pos_message, pos_datecreation) 
+values (3,null, 'Hello, this is the beginnning of my journey!', '2023-04-01');

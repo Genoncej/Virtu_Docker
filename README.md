@@ -22,3 +22,10 @@ puis exécuter
 docker compose exec node npm run dev -- --host --port 5000
 ```
 Récupérer l'url et remplacer le :5000 par :8085
+
+##Compte utilisable
+Email
+- savoieMB@gmail.com  
+
+Mot de passe
+- iutTweet23!
